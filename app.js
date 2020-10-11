@@ -3,7 +3,7 @@ const app = express();
 const jsQR = require("jsqr");
 
 app.get("/", (req, res, next) => {
-  res.render('camera.ejs');
+  res.render('scanner.ejs');
 });
 
 module.exports = app;
