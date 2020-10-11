@@ -33,8 +33,6 @@ app.post("/qrcode", (req, res, next) => {
   QRCode.toDataURL(req.body.url, function (err, url) {
     res.render('qrcode.ejs', {url});
   });
-    
-
 });
 
 ///////////////////////////////////////////////////

@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>jsQR Demo</title>
+  <title>QR code scanner & generator</title>
   <script src="./jsQR.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id="link">
-    <a href="/generator" alt="QR code generator"><button>QR code generator</button></a>
+    <a href="/generator" alt="QR code generator"><button id="generatorButton">Generate a QR code</button></a>
   </div>
   <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
   <canvas id="canvas" hidden></canvas>
