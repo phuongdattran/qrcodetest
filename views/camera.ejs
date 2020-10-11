@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+</head>
+<body>
+    <div class="video-wrap">
+        <video id="video" playsinline autoplay></video>
+    </div>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const constraints = {
+            audia: false,
+            video: {width: 1280, height: 720}
+        };
+
+        async function init(){
+            try{
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                video.srcObject = stream;
+            } catch(e) {
+                console.log(e);
+            }
+        }
+
+        init();
+
+    </script>
+</body>
+</html>
